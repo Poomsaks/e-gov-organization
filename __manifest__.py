@@ -21,7 +21,12 @@
         'views/mdm_type_service_view.xml',
         'views/mdm_type_industry_view.xml',
         'views/mdm_type_labor_view.xml',
-        'views/mdm_economy_view.xml'
+        'views/mdm_economy_view.xml',
+        'views/mdm_society_view.xml',
+        'views/mdm_type_plumbing_view.xml',
+        'views/mdm_type_electricity_view.xml',
+        'views/mdm_type_street_view.xml',
+        'views/mdm_welfare_benefit_view.xml'
     ],
     'installable': True,
     'auto_install': False,

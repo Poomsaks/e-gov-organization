@@ -12,4 +12,8 @@ from . import mdm_type_labor
 from . import mdm_type_livestock
 from . import mdm_type_service
 from . import mdm_economy
-
+from . import mdm_society
+from . import mdm_welfare_benefit
+from . import mdm_type_plumbing
+from . import mdm_type_electricity
+from . import mdm_type_street

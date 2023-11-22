@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+       <record id="type_street_view_form" model="ir.ui.view">
+           <field name="name">ประเภทถนน</field>
+           <field name="model">mdm.type.street</field>
+           <field name="arch" type="xml">
+               <form string="ประเภทถนน">
+                   <sheet>
+                       <group>
+                           <field name="name"/>
+                       </group>
+                   </sheet>
+               </form>
+           </field>
+       </record>
+
+
+        <record id="type_street_view_tree" model="ir.ui.view">
+            <field name="name">ประเภทถนน</field>
+            <field name="model">mdm.type.street</field>
+            <field name="arch" type="xml">
+                <tree string="ประเภทถนน">
+                    <field name="name"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="type_street_action" model="ir.actions.act_window">
+            <field name="name">ประเภทถนน</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">mdm.type.street</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <!-- This Menu Item must have a parent and an action -->
+        <menuitem id="type_street_menu" name="ประเภทถนน" parent="main_menu_information" action="type_street_action" sequence="11"/>
+    </data>
+</odoo>

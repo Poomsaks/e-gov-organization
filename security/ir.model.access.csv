@@ -26,3 +26,15 @@ mdm_type_industry,mdm_type_industry,model_mdm_type_industry,base.group_user,1,1,
 mdm_type_labor,mdm_type_labor,model_mdm_type_labor,base.group_user,1,1,1,1
 mdm_industry,mdm_industry,model_mdm_industry,base.group_user,1,1,1,1
 mdm_labor,mdm_labor,model_mdm_labor,base.group_user,1,1,1,1
+mdm_society,mdm_society,model_mdm_society,base.group_user,1,1,1,1
+mdm_hospital_sub_district,mdm_hospital_sub_district,model_mdm_hospital_sub_district,base.group_user,1,1,1,1
+res_partner,res_partner,model_res_partner,base.group_user,1,1,1,1
+mdm_social_worker,mdm_social_worker,model_mdm_social_worker,base.group_user,1,1,1,1
+mdm_school,mdm_school,model_mdm_school,base.group_user,1,1,1,1
+mdm_plumbing,mdm_plumbing,model_mdm_plumbing,base.group_user,1,1,1,1
+mdm_type_plumbing,mdm_type_plumbing,model_mdm_type_plumbing,base.group_user,1,1,1,1
+mdm_electricity,mdm_electricity,model_mdm_electricity,base.group_user,1,1,1,1
+mdm_type_electricity,mdm_type_electricity,model_mdm_type_electricity,base.group_user,1,1,1,1
+mdm_street,mdm_street,model_mdm_street,base.group_user,1,1,1,1
+mdm_type_street,mdm_type_street,model_mdm_type_street,base.group_user,1,1,1,1
+mdm_welfare_benefit,mdm_welfare_benefit,model_mdm_welfare_benefit,base.group_user,1,1,1,1
