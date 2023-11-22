@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+       <record id="type_public_view_form" model="ir.ui.view">
+           <field name="name">ประเภทสาธารณะประโยขน์</field>
+           <field name="model">mdm.type.public</field>
+           <field name="arch" type="xml">
+               <form string="ประเภทสาธารณะประโยขน์">
+                   <sheet>
+                       <group>
+                           <field name="name"/>
+                       </group>
+                   </sheet>
+               </form>
+           </field>
+       </record>
+
+
+        <record id="type_public_view_tree" model="ir.ui.view">
+            <field name="name">ประเภทสาธารณะประโยขน์</field>
+            <field name="model">mdm.type.public</field>
+            <field name="arch" type="xml">
+                <tree string="ประเภทสาธารณะประโยขน์">
+                    <field name="name"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="type_public_action" model="ir.actions.act_window">
+            <field name="name">ประเภทสาธารณะประโยขน์</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">mdm.type.public</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <!-- This Menu Item must have a parent and an action -->
+        <menuitem id="type_public_menu" name="ประเภทสาธารณะประโยขน์" parent="main_menu_information" action="type_public_action" sequence="4"/>
+    </data>
+</odoo>

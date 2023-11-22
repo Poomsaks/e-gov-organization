@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+       <record id="type_labor_view_form" model="ir.ui.view">
+           <field name="name">ประเภทแรงงาน</field>
+           <field name="model">mdm.type.labor</field>
+           <field name="arch" type="xml">
+               <form string="ประเภทแรงงาน">
+                   <sheet>
+                       <group>
+                           <field name="name"/>
+                       </group>
+                   </sheet>
+               </form>
+           </field>
+       </record>
+
+
+        <record id="type_labor_view_tree" model="ir.ui.view">
+            <field name="name">ประเภทแรงงาน</field>
+            <field name="model">mdm.type.labor</field>
+            <field name="arch" type="xml">
+                <tree string="ประเภทแรงงาน">
+                    <field name="name"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="type_labor_action" model="ir.actions.act_window">
+            <field name="name">ประเภทแรงงาน</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">mdm.type.labor</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <!-- This Menu Item must have a parent and an action -->
+        <menuitem id="type_labor_menu" name="ประเภทแรงงาน" parent="main_menu_information" action="type_labor_action" sequence="8"/>
+    </data>
+</odoo>

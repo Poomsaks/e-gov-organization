@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <menuitem id="main_menu_organization" name="จัดการข้อมูล อบต." sequence="1"/>
+        <menuitem id="main_menu_village" name="จัดการข้อมูล หมู่บ้าน" parent="main_menu_organization" sequence="2"/>
+        <menuitem id="main_menu_information" name="จัดการข้อมูล พื้นฐาน" parent="main_menu_organization" sequence="3"/>
+    </data>
+</odoo>

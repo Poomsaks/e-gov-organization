@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="mdm_economy_view_form" model="ir.ui.view">
+            <field name="name">เศรษฐกิจ</field>
+            <field name="model">mdm.economy</field>
+            <field name="arch" type="xml">
+                <form string="เศรษฐกิจ">
+                    <sheet>
+                        <group string="ข้อมูลหมู่บ้าน">
+                            <group colspan="4">
+                                <field name="village_id" nolabel="1"/>
+                            </group>
+                        </group>
+                        <group>
+                            <group string="การเกษตร">
+                                <group colspan="4">
+                                    <field name="agriculture_ids" widget="one2many_list" nolabel="1">
+                                        <tree editable="bottom">
+                                            <field name="type_agriculture_id"/>
+                                        </tree>
+                                    </field>
+                                </group>
+                            </group>
+                            <group string="การประมง">
+                                <group colspan="4">
+                                    <field name="fishing_ids" widget="one2many_list" nolabel="1">
+                                        <tree editable="bottom">
+                                            <field name="water"/>
+                                            <field name="trade"/>
+                                        </tree>
+                                    </field>
+                                </group>
+                            </group>
+                            <group string="ปศุสัตว์">
+                                <group colspan="4">
+                                    <field name="livestock_ids" widget="one2many_list" nolabel="1">
+                                        <tree editable="bottom">
+                                            <field name="type_livestock_id"/>
+                                        </tree>
+                                    </field>
+                                </group>
+                            </group>
+                            <group string="การบริการ">
+                                <group colspan="4">
+                                    <field name="service_ids" widget="one2many_list" nolabel="1">
+                                        <tree editable="bottom">
+                                            <field name="type_service_id"/>
+                                        </tree>
+                                    </field>
+                                </group>
+                            </group>
+                            <group string="การท่องเที่ยว">
+                                <group colspan="4">
+                                    <field name="travel_ids" widget="one2many_list" nolabel="1">
+                                        <tree editable="bottom">
+                                            <field name="name"/>
+                                        </tree>
+                                    </field>
+                                </group>
+                            </group>
+                            <group string="อุตสาหกรรม">
+                                <group colspan="4">
+                                    <field name="industry_ids" widget="one2many_list" nolabel="1">
+                                        <tree editable="bottom">
+                                            <field name="type_industry_id"/>
+                                            <field name="value"/>
+                                        </tree>
+                                    </field>
+                                </group>
+                            </group>
+                            <group string="แรงงาน">
+                                <group colspan="4">
+                                    <field name="labor_ids" widget="one2many_list" nolabel="1">
+                                        <tree editable="bottom">
+                                            <field name="type_labor_id"/>
+                                            <field name="value"/>
+                                        </tree>
+                                    </field>
+                                </group>
+                            </group>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+        <record id="mdm_economy_view_tree" model="ir.ui.view">
+            <field name="name">เศรษฐกิจ</field>
+            <field name="model">mdm.economy</field>
+            <field name="arch" type="xml">
+                <tree string="เศรษฐกิจ">
+                    <field name="village_id"/>
+                </tree>
+            </field>
+        </record>
+        <record id="mdm_economy_action" model="ir.actions.act_window">
+            <field name="name">เศรษฐกิจ</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">mdm.economy</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+        <!-- This Menu Item must have a parent and an action -->
+        <menuitem id="mdm_economy_menu" name="เศรษฐกิจ" parent="main_menu_village" action="mdm_economy_action"
+                  sequence="4"/>
+
+    </data>
+</odoo>

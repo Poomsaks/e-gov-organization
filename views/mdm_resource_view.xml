@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="mdm_resource_view_tree" model="ir.ui.view">
+            <field name="name">ทรัพยากร</field>
+            <field name="model">mdm.resource</field>
+            <field name="arch" type="xml">
+                <tree string="ทรัพยากร">
+                    <field name="village_id"/>
+                </tree>
+            </field>
+        </record>
+        <record id="mdm_resource_view_form" model="ir.ui.view">
+            <field name="name">ทรัพยากร</field>
+            <field name="model">mdm.resource</field>
+            <field name="arch" type="xml">
+                <form string="ทรัพยากร">
+                    <sheet>
+                        <group string="ข้อมูลหมู่บ้าน">
+                            <group colspan="4">
+                                <field name="village_id" nolabel="1"/>
+                            </group>
+                        </group>
+                        <group>
+                            <group string="ลักษณะดิน">
+                                <group colspan="4">
+                                    <field name="earth_ids" widget="one2many_list" nolabel="1">
+                                        <tree editable="bottom">
+                                            <field name="earth"/>
+                                            <field name="breed_ids" widget="many2many_tags"/>
+                                        </tree>
+                                    </field>
+                                </group>
+                            </group>
+                            <group string="ลักษณะแหล่งน้ำ">
+                                <group colspan="4">
+                                    <field name="water_ids" widget="one2many_list" nolabel="1">
+                                        <tree editable="bottom">
+                                            <field name="water"/>
+                                            <field name="value_water"/>
+                                        </tree>
+                                    </field>
+                                </group>
+                            </group>
+                            <group string="ลักษณะป่าไม้">
+                                <group colspan="4">
+                                    <field name="forest_ids" widget="one2many_list" nolabel="1">
+                                        <tree editable="bottom">
+                                            <field name="forest"/>
+                                            <field name="species_ids" widget="many2many_tags"/>
+                                        </tree>
+                                    </field>
+                                </group>
+                            </group>
+                        </group>
+                        <group string="สถานที่สาธารณะประโยชน์">
+                            <field name="public_space_ids" widget="one2many_list" nolabel="1">
+                                <tree editable="bottom">
+                                    <field name="name"/>
+                                    <field name="type_public_id"/>
+                                    <field name="number_area"/>
+                                    <field name="area_01"/>
+                                    <field name="area_02"/>
+                                    <field name="area_02"/>
+                                    <field name="area_03"/>
+                                    <field name="given_at"/>
+                                </tree>
+                            </field>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+        <record id="mdm_resource_action" model="ir.actions.act_window">
+            <field name="name">ทรัพยากร</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">mdm.resource</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+        <!-- This Menu Item must have a parent and an action -->
+        <menuitem id="mdm_resource_menu" name="ทรัพยากร" parent="main_menu_village" action="mdm_resource_action"
+                  sequence="2"/>
+    </data>
+</odoo>

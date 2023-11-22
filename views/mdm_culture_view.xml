@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="mdm_culture_view_form" model="ir.ui.view">
+            <field name="name">ศาสนา ประเภณี วัฒนธรรม</field>
+            <field name="model">mdm.culture</field>
+            <field name="arch" type="xml">
+                <form string="ศาสนา ประเภณี วัฒนธรรม">
+                    <sheet>
+                        <group string="ข้อมูลหมู่บ้าน">
+                            <group colspan="4">
+                                <field name="village_id" nolabel="1"/>
+                            </group>
+                        </group>
+                        <group>
+                            <group string="วัด">
+                                <group colspan="4">
+                                    <field name="temple_ids" widget="one2many_list" nolabel="1">
+                                        <tree editable="bottom">
+                                            <field name="name"/>
+                                            <field name="value"/>
+                                        </tree>
+                                    </field>
+                                </group>
+                            </group>
+                            <group string="ภูมิปัญญาท้องถิ่น">
+                                <group colspan="4">
+                                    <field name="wisdom_ids" widget="one2many_list" nolabel="1">
+                                        <tree editable="bottom">
+                                            <field name="name"/>
+                                            <field name="language"/>
+                                        </tree>
+                                    </field>
+                                </group>
+                            </group>
+                            <group string="ประเภณี">
+                                <group colspan="4">
+                                    <field name="tradition_ids" widget="one2many_list" nolabel="1">
+                                        <tree editable="bottom">
+                                            <field name="name"/>
+                                            <field name="start_mouth"/>
+                                            <field name="end_mouth"/>
+                                        </tree>
+                                    </field>
+                                </group>
+                            </group>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+        <record id="mdm_culture_view_tree" model="ir.ui.view">
+            <field name="name">ศาสนา ประเภณี วัฒนธรรม</field>
+            <field name="model">mdm.culture</field>
+            <field name="arch" type="xml">
+                <tree string="ศาสนา ประเภณี วัฒนธรรม">
+                    <field name="village_id"/>
+                </tree>
+            </field>
+        </record>
+        <record id="mdm_culture_action" model="ir.actions.act_window">
+            <field name="name">ศาสนา ประเภณี วัฒนธรรม</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">mdm.culture</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+        <!-- This Menu Item must have a parent and an action -->
+        <menuitem id="mdm_culture_menu" name="ศาสนา ประเภณี วัฒนธรรม" parent="main_menu_village"
+                  action="mdm_culture_action" sequence="3"/>
+
+    </data>
+</odoo>

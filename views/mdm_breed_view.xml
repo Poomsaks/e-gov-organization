@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="mdm_breed_view_form" model="ir.ui.view">
+            <field name="name">_view_form</field>
+            <field name="model">mdm.breed</field>
+            <field name="arch" type="xml">
+                <form string="พันธุ์พืช">
+                    <sheet>
+                        <group>
+                            <field name="breed_code"/>
+                            <field name="breed_abbr_name"/>
+                            <field name="breed_name"/>
+                            <field name="breed_desc"/>
+                            <field name="breed_remark"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="mdm_breed_view_tree" model="ir.ui.view">
+            <field name="name">_view_tree</field>
+            <field name="model">mdm.breed</field>
+            <field name="arch" type="xml">
+                <tree string="พันธุ์พืช">
+                    <field name="breed_code"/>
+                    <field name="breed_abbr_name"/>
+                    <field name="breed_name"/>
+                    <field name="breed_desc"/>
+                    <field name="breed_remark"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="mdm_breed_action" model="ir.actions.act_window">
+            <field name="name">พันธุ์พืช</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">mdm.breed</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+        <!-- This Menu Item must have a parent and an action -->
+        <menuitem id="mdm_breed_menu" name="พันธุ์พืช" parent="main_menu_information" action="mdm_breed_action" sequence="3"/>
+    </data>
+</odoo>
