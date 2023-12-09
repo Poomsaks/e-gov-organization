@@ -17,3 +17,4 @@ from . import mdm_welfare_benefit
 from . import mdm_type_plumbing
 from . import mdm_type_electricity
 from . import mdm_type_street
+from . import mdm_position_group

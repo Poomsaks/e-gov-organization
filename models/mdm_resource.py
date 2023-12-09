@@ -49,7 +49,7 @@ class MDMForest(models.Model):
     _description = "ลักษณะของป่าไม้"
 
     resource_id = fields.Many2one('mdm.resource', string='รหัสทรัพยากร', required=False, ondelete='cascade')
-    forest = fields.Selection(string="แหล่งน้ำ",
+    forest = fields.Selection(string="ป่าไม้",
                               selection=[('1', 'ป่าผลัดใบ'),
                                          ('2', 'ป่าเบญจพรรณ')],
                               required=False,

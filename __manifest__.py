@@ -26,7 +26,8 @@
         'views/mdm_type_plumbing_view.xml',
         'views/mdm_type_electricity_view.xml',
         'views/mdm_type_street_view.xml',
-        'views/mdm_welfare_benefit_view.xml'
+        'views/mdm_welfare_benefit_view.xml',
+        'views/mdm_position_group_view.xml'
     ],
     'installable': True,
     'auto_install': False,

@@ -38,3 +38,4 @@ mdm_type_electricity,mdm_type_electricity,model_mdm_type_electricity,base.group_
 mdm_street,mdm_street,model_mdm_street,base.group_user,1,1,1,1
 mdm_type_street,mdm_type_street,model_mdm_type_street,base.group_user,1,1,1,1
 mdm_welfare_benefit,mdm_welfare_benefit,model_mdm_welfare_benefit,base.group_user,1,1,1,1
+mdm_position_group,mdm_position_group,model_mdm_position_group,base.group_user,1,1,1,1
